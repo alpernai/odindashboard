@@ -4,10 +4,97 @@
     padding: 0;
     border: 0;
     outline: 0;
-    /* list-style: none; */
+    list-style: none;
     /* font: inherit; */
-    /* text-decoration: none; */
+    text-decoration: none;
     line-height: normal;
     background: none;
     color: inherit;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.dashboard-container{
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.header{
+    border: 1px solid black;
+    background-color: white;
+    padding: 1em;
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+input {
+    display: inline-block;
+    width: 75%; /* Adjust this value as needed */
+    padding: 8px 12px; /* Adds some inner spacing */
+    border: 1px solid #ccc; /* Adds a border to make it visible */
+    border-radius: 10%; /* Optional: gives rounded corners */
+    font-size: 16px; /* Sets a readable font size */
+    color: #333; /* Text color */
+    background-color: #fff; /* Background color for visibility */
+}
+
+.greeting, .media-action-container{
+    grid-row: 2 / 3;
+}
+
+.navbar{
+    border: 1px solid black;
+    background-color: #003f5c;
+    color: white;
+    padding: 1em;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    display: grid;
+    grid-template-rows: 1fr 2fr 4fr;
+}
+
+.logo-container {
+    display: flex;
+    align-items: top; 
+    justify-items: center;
+}
+
+.navigation{
+    grid-row: 2 / 3;
+}
+
+.settings{
+    grid-row: 3 / 4;
+}
+
+.dashboard-body{
+    border: 1px solid black;
+    background: #f0f4f8;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    gap: 1em;
+}
+
+.projects{
+    padding: 1em;
+    grid-column: 1 / 2;
+}
+
+.right-dashboard-body{
+    grid-column: 2 / 3;
+
+}
+
+.announcements, .trending{
+    padding: 1em;
+    border: 1px solid black;
+    grid-column: 2 / 3;
+}
+
+.icon, li{
+    padding: 0.30em;
 }
