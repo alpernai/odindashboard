@@ -5,54 +5,131 @@
     border: 0;
     outline: 0;
     list-style: none;
-    /* font: inherit; */
-    text-decoration: none;
-    line-height: normal;
-    background: none;
-    color: inherit;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .dashboard-container{
-    border: 1px solid black;
     display: grid;
     grid-template-columns: 1fr 4fr;
 }
 
 .header{
-    border: 1px solid black;
     background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     padding: 1em;
+    padding-left: 3em;
     grid-column: 2 / 3;
     display: grid;
     grid-template-columns: 3fr 2fr;
     grid-template-rows: 1fr 1fr;
 }
 
-input {
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.search-bar-container .icon {
+    font-size: 1.5em;
+}
+
+.search-bar {
     display: inline-block;
-    width: 75%; /* Adjust this value as needed */
-    padding: 8px 12px; /* Adds some inner spacing */
-    border: 1px solid #ccc; /* Adds a border to make it visible */
-    border-radius: 10%; /* Optional: gives rounded corners */
-    font-size: 16px; /* Sets a readable font size */
-    color: #333; /* Text color */
-    background-color: #fff; /* Background color for visibility */
+    width: 80%; 
+    padding: 8px 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 20px; 
+    background-color: #f0f4f8; 
+}
+
+input {
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 10%; 
+    background-color: #fff; 
+}
+
+.fa-regular{
+    font-size: 1.5em;
+}
+
+.account {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.75em;
+}
+
+.account .profile-pic {
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%; 
+    background-color: #ccc; 
+}
+
+.account-name{
+    font-size: 1.25em;
 }
 
 .greeting, .media-action-container{
     grid-row: 2 / 3;
 }
 
+.greeting {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.greeting .profile-pic {
+    width: 90px; 
+    height: 90px;
+    border-radius: 50%; 
+    background-color: #ccc; 
+    flex-shrink: 0; 
+}
+
+.greeting p.greeting {
+    font-size: 0.9em; /* Smaller print */
+    margin: 0;
+}
+
+.greeting p.user {
+    font-size: 1.2em; /* Larger print */
+    margin: 0;
+}
+
+.media-actions {
+    display: flex;
+    flex-direction: row; /* Align buttons horizontally */
+    gap: 1em; /* Space between buttons */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Align items to the right */
+}
+
+.media-action{
+    display: inline;
+}
+
+.media-actions button {
+    background-color: #003f5c; /* Same color as the sidebar */
+    color: white;
+    padding: 1em 2.5em;
+    border-radius: 20px; /* Rounded buttons */
+    cursor: pointer;
+    border: none;    
+}
+
 .navbar{
-    border: 1px solid black;
     background-color: #003f5c;
     color: white;
     padding: 1em;
     grid-column: 1 / 2;
     grid-row: 1 / 3;
     display: grid;
-    grid-template-rows: 1fr 2fr 4fr;
+    grid-template-rows: 1fr 9fr;
 }
 
 .logo-container {
@@ -61,40 +138,138 @@ input {
     justify-items: center;
 }
 
+#logo{
+    margin-top: .1em;
+}
+
+.logo-container h1{
+    padding: .70em;
+}
+
 .navigation{
+    font-size: 1.25em;
     grid-row: 2 / 3;
 }
 
 .settings{
-    grid-row: 3 / 4;
+    font-size: 1.25em;
 }
 
 .dashboard-body{
-    border: 1px solid black;
     background: #f0f4f8;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     display: grid;
     grid-template-columns: 5fr 2fr;
-    gap: 1em;
+    padding: 1.5em
+}
+
+.section-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    padding-left: 1em; 
 }
 
 .projects{
     padding: 1em;
     grid-column: 1 / 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1em; 
+}
+
+.project-card {
+    background-color: #ffffff; 
+    padding: 1.5em; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+    height: 100%; 
+}
+
+.project-card h2 {
+    margin-bottom: 0.5em; 
+}
+
+.project-card p {
+    margin-bottom: 1em;
+}
+
+.project-card ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5em; 
 }
 
 .right-dashboard-body{
+    padding: 1em;
     grid-column: 2 / 3;
-
+    display: grid;
+    grid-template-rows: auto auto; 
 }
 
 .announcements, .trending{
+    background-color: #ffffff; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     padding: 1em;
-    border: 1px solid black;
     grid-column: 2 / 3;
 }
 
-.icon, li{
-    padding: 0.30em;
+.announcements {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-bottom: 1.5em;
 }
+
+.announcement-card {
+    border-bottom: 1px solid #ccc; /* Divider line */
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.announcement-card:last-child {
+    border-bottom: none; 
+}
+
+.trending {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    height: 100%; /* Ensures trending matches the height of projects */
+}
+
+.trending-card {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.trending-card .profile-pic {
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%; 
+    background-color: #ccc; 
+    flex-shrink: 0; 
+}
+
+.trending-card .user-tag {
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.trending-card .username {
+    font-size: 0.8em;
+    color: #666; /* Slightly lighter font color */
+}
+
+.icon{
+    padding: 0.5em;
+}
+
+li {
+    padding: 0.5em; /* Adjust as necessary */
+}
+
+
